@@ -1,17 +1,20 @@
 const app = Vue.createApp({
     data() {
         return {
-            product: 'Socks',
+            product: 'Calcetines',
             // Solution
-            description: 'A warm fuzzy pair of socks.' ,
+            description: 'Los mejores del mundo.' ,
             // Solution
-            precio: "10.001 CLP",
+            precio: "10.000 CLP",
             // Imagen 
             image: './assets/images/socks_blue.jpg',
 
             alt: 'Imagen foto de prueba socks blue',
 
-            url: '#'
+            url: '#',
+
+            inStock: true
+
         }
     }
 })

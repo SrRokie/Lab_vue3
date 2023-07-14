@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <style>
+      .green-text {
+        color: green;
+      }
+      .red-text {
+        color:  red;
+      }
+  
+      .green-link {
+        color: green;
+        text-decoration: none;
+      }
+  
+      .green-link:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -21,12 +38,14 @@
               <h1>{{ product }}</h1>
               <p>{{ description }}</p>
               <p>{{ precio }}</p>
-              <a :href="url">Made by Vue Mastery</a>
+              <p v-if="inStock" class="green-text">Stock - Disponible</p>
+              <p v-else class="red-text">Stock - No Disponible</p>
+              <a :href="url">Vendedor : SportLab</a>
             </div>        
           </div>   
         </div>  
     </div>
-    
+
     <!-- Import App -->
     <script src="./main.js"></script>
 
